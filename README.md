@@ -1,5 +1,6 @@
 # Controversy and Fame: Does provocation make success?
 
+<<<<<<< HEAD
 Controversial topics can gather a lot of attention by making people feel
 compelled to participate in the discussion. But is it an effective way for
 YouTube channels to become famous? Is provocation a good strategy? 
@@ -19,6 +20,23 @@ We will then extend our study to political content and unpopular opinions over t
 - Have controversial videos become more and more present on Youtube over time ?
 - Is controversy a more efficient strategy in some fields than others?
 - What aspects of the channel a controversial content impacts the most (number of subscribers, ratio like/dislike, comments etc) ?
+=======
+Provocative content can gather a lot of attention by stimulating people's emotions and
+catching their attention. But is it an effective way for YouTube channels to become famous? 
+Is provocation a good strategy? 
+
+The motivation behind this study is to determine, by analyzing the YouNiverse datasets, whether or not a channel should use provocative content to grow in popularity over time. To conduct this study, we will identify such provocative videos by the number of dislikes and comments, the typography of the title (capitalization, lots of exclamation marks), and use sentiment analysis on the video description and tags. Therefore, we will find out if provocative videos increase the number of subscribers and views, on short or long term. We will also investigate whether provocative content is a more effective strategy in some fields (e.g. politics, science) than others (e.g. recipes), using video/channel tags.
+# Research Questions
+
+- What elements can make a video labelled as "provocative" ?
+- How much more provocative videos are there compared to non-provocative ones in the datasets ?
+- What type of provocation makes more succes (emojis, words, capital letters...) ?
+- Do provocative videos gather more success than non-provocative ones in general ? Is it statistically significant ?
+- How can we quantify the fame of a channel ? 
+- Have provocative videos become more and more present on Youtube over time ?
+- Is provocation a more efficient strategy in some fields than others?
+- What aspects of the channel a provocative content impacts the most (number of subscribers, ratio like/dislike, comments etc) ?
+>>>>>>> 9722d41c6ea00f2b1ecd821efd78627a1a7d3e37
 
 # Datasets 
 
