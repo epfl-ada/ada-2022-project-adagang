@@ -11,16 +11,16 @@ The motivation behind this study is to determine, by analyzing the YouNiverse da
 ## Research Questions
 
 * What elements can make a video labelled as “provocative”?
-- How to determine a threshold that define a video as provocative?
+    * How to determine a threshold that define a video as provocative?
 * What is the proportion of provocative videos on YouTube?
-- Do successful channels use more those principles?
-- Is provocation more and more present on YouTube over time?
+    * Do successful channels use more those principles?
+    * Is provocation more and more present on YouTube over time?
 * How can we quantify the success of a video?
 * How does provocative content generate success on a statistical point of view (number of likes, subscribers or views)?
-- What type of provocation makes more success (emojis, words, capital letters...)?
-- In which categories does it have the biggest impact?
-- Does provocative content help to get a trending video?
-- What is the proportion of provocative content in YouTube trends?
+    * What type of provocation makes more success (emojis, words, capital letters...)?
+    * In which categories does it have the biggest impact?
+    * Does provocative content help to get a trending video?
+    * What is the proportion of provocative content in YouTube trends?
 * How do provocative videos have an impact on the evolution of a channel (number of subscribers, ratio like/dislike, comments etc.)?
 * Is it possible to perform a linear regression that determines the optimal way to use provocation to obtain the best success index?
 
@@ -37,26 +37,26 @@ The list of [positive words](https://ptrckprry.com/course/ssd/data/positive-word
 
 ## Methods
 
-###Step 1: Data loading, preprocessing and dataset construction
+### Step 1: Data loading, preprocessing and dataset construction
 The first of the project was to be able to treat those huge datasets. In fact, a lot of time has been spent in optimization to be able to go through them in a reasonable computational time also using parallelism. The milestone 2 focus on one year only (2019), however, the whole dataset will be used for the analysis. Google Colab or swap functions will be used. 
 The data has been filtered with ASCII characters to reassure the fact of working with English videos. Finally, a data frame, linking the datasets Time Series Data and Video Metadata, has been constructed keeping record of important information about the content of the videos.
 
-###Step 2: Initial plots, sentiment analysis
+### Step 2: Initial plots, sentiment analysis
 Plots about the found results on the title, description and tags are calculated. In fact, different graphics (e.g., histograms) giving information about the provocation in the content allowing to understand the portion of provocation on YouTube. In addition, a sentiment analysis is performed. The index returned is used to classify the videos for the next analysis.
 
-###Step 3: Study of provocative videos and determination of success index
+### Step 3: Study of provocative videos and determination of success index
 Plots will show how the different factors of provocation are linked with the success of the videos. We will check if a potential correlation between provocative content and interest in a video exists (likes, trending etc.). To do so the number of views or like in function of the content will be highlighted per example. This research must be normalized according to the importance of the respective channel. The categories will be analyzed separately to spot a potential difference. The criteria of success for such specific videos will be specified
 
-###Step 4: Determination of the impact of provocative content on the evolution of a channel
+### Step 4: Determination of the impact of provocative content on the evolution of a channel
 The videos will be classified by provocation. The evolution of a channel depending to its most provocative content in comparison to its less provocative content can be plot through time. The average evolution between channels can be highlighted to determine if provocation induce a faster growth on short or long term. The videos of a channel must first be filtered. In fact, it is important to see the evolution of a channel because of a video, we have to be sure that that video is the only in a defined span.
 
-###Step 5: Complementary analysis of the provocation on the channel
+### Step 5: Complementary analysis of the provocation on the channel
 Maybe the impact of the provocative content won’t be that significant on the success of a channel. However, the effect could be sense on the discussion that it generates. The polarity of the likes/dislikes and the number of comments are then interesting. Another aspect to determine is whether a channel is sensitive to provocative videos. In fact, a channel used to this type of videos can be more robust to provocation than another one that hardly never use this pattern. People might get bored of provocative content. 
 
-###Step 6: Linear regression
+### Step 6: Linear regression
 Using the different factors that determine provocation content and the success index, the linear regression will try to show if it exists a way to combine those indicators that gives a statistically non-negligeable impact on the success of a video.
 
-###Step 7: Github site building and Datastory redaction
+### Step 7: Github site building and Datastory redaction
 The datastory will be write using a selection of the plots realized. The most interesting results will be reported.
 
 
@@ -68,24 +68,24 @@ The datastory will be write using a selection of the plots realized. The most in
 
 
 ## Timeline
-###Step 1 and Step 2: Milestone 2
+### Step 1 and Step 2: Milestone 2
 
-###Step 3:
+### Step 3:
 *	START: 22 November 2022
 *	END: 29 November 2022
-###Step 4:
+### Step 4:
 *	START: 30 November 2022
 *	END: 6 December 2022
 
-###Step 5:
+### Step 5:
 *	START: 7 December 2022
 *	END: 10 December 2022
 
-###Step 6:
+### Step 6:
 *	START: 10 December 2022
 *	END: 15 December 2022
 
-###Step 7:
+### Step 7:
 *	START: 12 December 2022
 *	END: 22 December 2022
 
