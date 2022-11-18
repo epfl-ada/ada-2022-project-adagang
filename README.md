@@ -40,14 +40,13 @@ The list of [positive words](https://ptrckprry.com/course/ssd/data/positive-word
 `data_processing.ipynb` Notebook that computes a relatively small parquet file (around 830 MB) that will be used as a basis for our analysis. It also computes features on the data (various counts and sentiment analysis).
 It takes very long to run so we provide it without the cell outputs. The file produced can be downloaded from Google Docs (the link is in the file `data_exploration.ipynb`).
 
-`data_exploration.ipynb` Notebook where we explore the data and the features we computed.
+`exploration.ipynb` Notebook where we explore the data and the features we computed, and do some light preprocessing.
 
 
 ## Methods
 
 ### Step 1: Data loading, preprocessing and dataset construction
-The first of the project was to be able to treat those huge datasets. In fact, a lot of time has been spent in optimization to be able to go through them in a reasonable computational time also using parallelism. The milestone 2 focus on one year only (2019), however, the whole dataset will be used for the analysis. Google Colab or swap functions will be used.
-The data has been filtered with ASCII characters to reassure the fact of working with English videos. Finally, a data frame, linking the datasets Time Series Data and Video Metadata, has been constructed keeping record of important information about the content of the videos.
+The first of the project was to be able to treat those huge datasets. In fact, a lot of time has been spent in optimization to be able to go through them in a reasonable computational time also using parallelism. The milestone 2 focus on one year only (2019), however, the whole dataset will be used for the analysis. Google Colab or swap functions will be used. Finally, a data frame, linking the datasets Time Series Data and Video Metadata, has been constructed keeping record of important information about the content of the videos.
 
 ### Step 2: Initial plots, sentiment analysis
 Plots about the found results on the title, description and tags are calculated. In fact, different graphics (e.g., histograms) giving information about the provocation in the content allowing to understand the portion of provocation on YouTube. In addition, a sentiment analysis is performed. The index returned is used to classify the videos for the next analysis.
@@ -76,7 +75,7 @@ The datastory will be write using a selection of the plots realized. The most in
 
 
 ## Timeline
-### Step 1 and Step 2: 
+### Step 1 and Step 2:
 Milestone 2
 
 ### Step 3:
