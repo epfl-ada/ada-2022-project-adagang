@@ -76,7 +76,8 @@ The datastory will be write using a selection of the plots realized. The most in
 
 
 ## Timeline
-### Step 1 and Step 2: Milestone 2
+### Step 1 and Step 2: 
+Milestone 2
 
 ### Step 3:
 *	START: 22 November 2022
