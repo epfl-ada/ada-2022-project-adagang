@@ -1,5 +1,5 @@
-# ada-2022-project-adagang
-ada-2022-project-adagang created by GitHub Classroom
+# Project ADA 2022-ADAGANG
+Djian Post, Matteo Peduto, Victor ...., Maj .....
 
 # Fame on YouTube: Does provocation make success?
 
@@ -92,8 +92,8 @@ The datastory will be write using a selection of the plots realized. The most in
 
 
 ## Organization in team
-Step 3: teammate 1-2-3-4
-Step 4: teammate 1-2
-Step 5: teammate 3-4
-Step 6: teammate 1-2
+Step 3: teammate 1-2-3-4 <br />
+Step 4: teammate 1-2 <br />
+Step 5: teammate 3-4 <br />
+Step 6: teammate 1-2 <br />
 Step 7: teammate 3-4
