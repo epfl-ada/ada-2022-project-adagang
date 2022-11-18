@@ -25,7 +25,7 @@ o	What is the proportion of provocative content in YouTube trends?
 •	Is it possible to perform a linear regression that determines the optimal way to use provocation to obtain the best success index?
 
 
-# Additional Datasets 
+## Additional Datasets 
 Two Datasets are used in this project, but they represent the same data at different moments in time.
 
 The daily US YouTube trending videos are collected in those datasets. This [one](https://www.kaggle.com/datasets/datasnaek/youtube-new?select=USvideos.csv![image](https://user-images.githubusercontent.com/114214482/202745636-71d46d36-8922-48e4-8527-2b392dfad597.png)
@@ -34,9 +34,9 @@ The daily US YouTube trending videos are collected in those datasets. This [one]
 
 List of words are also used to determine the presence of style of the content.
 
-The list of negative words link https://ptrckprry.com/course/ssd/data/negative-words.txt is used. The goal is to determine if content with a negative feeling induce more success.
+The list of [negative words](https://ptrckprry.com/course/ssd/data/negative-words.txt) is used. The goal is to determine if content with a negative feeling induce more success.
 
-The list of positive words link https://ptrckprry.com/course/ssd/data/positive-words.txt is used. This list is mainly necessary to determine if the negative impact really had a significant impact on the success.
+The list of [positive words](https://ptrckprry.com/course/ssd/data/positive-words.txt) is used. This list is mainly necessary to determine if the negative impact really had a significant impact on the success.
 
 
 
