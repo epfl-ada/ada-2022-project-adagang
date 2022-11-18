@@ -1,7 +1,8 @@
 from tqdm import tqdm
 from nltk.sentiment import SentimentIntensityAnalyzer
 import csv
-
+import pandas as pd
+from parallelbar import progress_imap
 
 
 ##=========================================Remove non-English words================================================
@@ -162,8 +163,45 @@ def sentiment(text, fieldname=''):
 
 ##=================================FEATURE EXTRACTION==================================
 
-def extract_features(text_to_features, year, field):
+
+def extract_features_mp(text_to_features, year, field, nb_cores=1):
     ''' Extract the video features according to a specified function, on a given year, on a given field.
+        With multiprocessing. It is not always faster, use it with caution!
+        
+        :param text_to_features: function that maps a string to a list of features. The prototype must be
+            text_to_features(text, fieldname) -> dict of features.
+        :param year: string of the year
+        :param field: name of the video field to analyse (string)
+        :param nb_cores: number of cores to use for the multiprocessing
+        
+        :return: DataFrame with the features (each row corresponds to a video, the features are columns)
+    '''
+    
+    print(f'[1/3] Extracting the fields `{field}`...')
+    list_text = []
+    with open(f'generated/{year}/{year}_videos.csv', 'r') as f:
+        reader = csv.DictReader(f, delimiter=',')
+        for video in tqdm(reader):
+            list_text.append(video[field])
+    print('...done.')
+    
+    print(f'[2/3] Computing features (using {nb_cores} CPU cores)')
+    features_list = [] # list of dicts (one for each video)
+    chunksize = len(list_text) // nb_cores
+    features_list = progress_imap(text_to_features, list_text, n_cpu=nb_cores, chunk_size=chunksize)
+    print('...done.')
+
+    print('[3/3] Converting features to dataframe...')
+    features_list = pd.DataFrame.from_dict(features_list)
+    print('...done.')
+    
+    return features_list
+
+
+
+def extract_features(text_to_features, year, field):
+    ''' Extract the video features according to a specified function, on a given year, on a given field. 
+        Without multiprocessing.
         
         :param text_to_features: function that maps a string to a list of features. The prototype must be
             text_to_features(text, fieldname) -> dict of features.
@@ -175,8 +213,8 @@ def extract_features(text_to_features, year, field):
     
     print('Computing features')
     features_list = [] # list of dicts (one for each video)
-    with open(f'generated/{year}/{year}_videos.csv', "r") as f:
-        reader = csv.DictReader(f, delimiter=",")
+    with open(f'generated/{year}/{year}_videos.csv', 'r') as f:
+        reader = csv.DictReader(f, delimiter=',')
         for video in tqdm(reader):
             features_video = text_to_features(video[field], fieldname=field)
             features_video
