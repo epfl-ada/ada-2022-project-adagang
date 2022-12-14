@@ -231,3 +231,35 @@ def extract_features(text_to_features, year, field):
     print('...done.')
     
     return features_list
+
+
+def text_from_ids(video_ids, data_path):
+    '''
+        Return the titles, tags and descriptions of videos with given display_ids
+    
+        :param videos_ids: set with the `display_id` of the videos
+        :param data_path: string with the path to the csv data file
+        
+        :return: dataframe with the display_id, title, tags and description of each video
+        
+        Example: 
+        df = text_from_ids(video_ids={'JOeSxtcNdHQ', 'EPMLTw2zINw'}, data_path='generated/2019/2019_videos.csv')
+    
+    '''
+    
+    text_vids = []
+    
+    with open(data_path, 'r') as f:
+        reader = csv.DictReader(f, delimiter=',')  
+        
+        for video in tqdm(reader):
+            if video['display_id'] in video_ids:
+                text_vids.append({
+                    'display_id': video['display_id'],
+                    'title': video['title'],
+                    'description': video['description'],
+                    'tags': video['tags']
+                })
+                
+    df_text_vids = pd.DataFrame.from_dict(text_vids)
+    return df_text_vids
