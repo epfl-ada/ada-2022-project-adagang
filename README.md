@@ -26,7 +26,7 @@ We use a daily US YouTube trending videos [dataset](https://www.kaggle.com/datas
 `data_processing.ipynb` Notebook that computes a relatively small parquet file (around 830 MB) that will be used as a basis for our analysis. It also computes features on the data (various counts and sentiment analysis).
 It takes very long to run so we provide it without the cell outputs. The file produced can be downloaded from Google Docs (the link is in the file `main.ipynb`).
 
-`exploration.ipynb` Main notebook where all the results are computed. The order of the results is the same than what can be found on the website.
+`main.ipynb` Main notebook where all the results are computed. The order of the results is the same than what can be found on the website.
 
 `helpers.py`Python file where all the functions used to process the title and description can be found. The functions are used in the notebook `data_processing.ipynb`. The idea of the project has largely been changed since the milestone 2. A lot of the functions present in the file do not end in results foundable in the data story. The function sentiment however, basis of our project, is defined in this file.
 
