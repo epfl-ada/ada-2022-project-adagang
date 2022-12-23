@@ -21,18 +21,15 @@ It is often assumed that negative content gathers a lot of attention by stimulat
 
 We use a daily US YouTube trending videos [dataset](https://www.kaggle.com/datasets/datasnaek/youtube-new?select=USvideos.csv), from 2017 to 2018. The data has been collected using the YouTube API. The data was previously scrapped using the information available on this [site](https://github.com/mitchelljy/Trending-YouTube-Scraper/tree/master/output)
 
-List of words are also used to determine the presence of style of the content.
-
-The list of [negative words](https://ptrckprry.com/course/ssd/data/negative-words.txt) is used. The goal is to determine if content with a negative feeling induce more success.
-
-The list of [positive words](https://ptrckprry.com/course/ssd/data/positive-words.txt) is used. This list is mainly necessary to determine if the negative impact really had a significant impact on the success.
 
 ## Folder structure
 
 `data_processing.ipynb` Notebook that computes a relatively small parquet file (around 830 MB) that will be used as a basis for our analysis. It also computes features on the data (various counts and sentiment analysis).
-It takes very long to run so we provide it without the cell outputs. The file produced can be downloaded from Google Docs (the link is in the file `data_exploration.ipynb`).
+It takes very long to run so we provide it without the cell outputs. The file produced can be downloaded from Google Docs (the link is in the file `main.ipynb`).
 
-`exploration.ipynb` Notebook where we explore the data and the features we computed, and do some light preprocessing.
+`exploration.ipynb` Main notebook where all the results are computed. The order of the results is the same than what can be found on the website.
+
+`helpers.py`Python file where all the functions used to process the title and description can be found. The functions are used in the notebook `data_processing.ipynb`. The idea of the project has largely been changed since the milestone 2. A lot of the functions present in the file do not end in results foundable in the data story. The function sentiment however, basis of our project, is defined in this file.
 
 
 ## Methods
@@ -44,7 +41,7 @@ The first task of the project was to be able to treat those huge datasets. In fa
 Plots about the found results on the title, description and tags are calculated. Different graphics (e.g., histograms) giving information about the content allowing to understand what define successful videos. In addition, a sentiment analysis is performed using Vader. The values returned are used to classify the videos for the next analysis.
 
 ### Step 3: Determination of the use of emotions in successful videos
-Plots will show how the negativity is linked with the success of the videos. The categories will be analyzed separately to spot a potential difference. 
+This is a preliminary analysis performed to determine if successful videos use more negativity title and description. The success of a video is determined with the trending dataset. The number of views and likes of the videos of this dataset are used to determine tresholds to filter successful videos from the created dataset. Likes and views are indeed an important factor of the YouTube trending algorithm. This step justify the rest of the project. 
 
 ### Step 4: Impact of the negativity on the views and likes
 Through the sentiment analysis, the number of views and likes are studied with respect to the sentiment analysis score. Thanks to a linear regression, the goal is to determine if negativity (or emotions in general) generate more interest. The most sensitive categories to emotions are determined. It will also be determined whether a negative title or a negative description (predictor) is more connected to the number of likes or views (outcome).
@@ -60,34 +57,3 @@ The datastory will be write using a selection of the plots realized. The most in
 
 
 
-## Timeline
-### Step 1 and Step 2:
-Milestone 2
-
-### Step 3:
-*	START: 22 November 2022
-*	END: 29 November 2022
-### Step 4:
-*	START: 30 November 2022
-*	END: 6 December 2022
-
-### Step 5:
-*	START: 7 December 2022
-*	END: 10 December 2022
-
-### Step 6:
-*	START: 10 December 2022
-*	END: 15 December 2022
-
-### Step 7:
-*	START: 12 December 2022
-*	END: 22 December 2022
-
-
-
-## Organization in team
-Step 3: teammate 1-2-3-4 <br />
-Step 4: teammate 1-2 <br />
-Step 5: teammate 3-4 <br />
-Step 6: teammate 1-2 <br />
-Step 7: teammate 3-4
