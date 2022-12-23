@@ -18,9 +18,8 @@ It is often assumed that negative content gathers a lot of attention by stimulat
 * What are the most successful negative tags?
 
 ## Additional Datasets
-Two Datasets are used in this project, but they represent the same data at different moments in time.
 
-The daily US YouTube trending videos are collected in those datasets. This [one](https://www.kaggle.com/datasets/datasnaek/youtube-new?select=USvideos.csv) collects the videos from 2017 to 2018 and this [other one](https://www.kaggle.com/datasets/rsrishav/youtube-trending-video-dataset?select=US_youtube_trending_data.csv) collects videos from 2020 to 2022. The data has been collected using the YouTube API. The data was previously scrapped using the information available on this [site](https://github.com/mitchelljy/Trending-YouTube-Scraper/tree/master/output)
+We use a daily US YouTube trending videos [dataset](https://www.kaggle.com/datasets/datasnaek/youtube-new?select=USvideos.csv), from 2017 to 2018. The data has been collected using the YouTube API. The data was previously scrapped using the information available on this [site](https://github.com/mitchelljy/Trending-YouTube-Scraper/tree/master/output)
 
 List of words are also used to determine the presence of style of the content.
 
@@ -39,31 +38,25 @@ It takes very long to run so we provide it without the cell outputs. The file pr
 ## Methods
 
 ### Step 1: Data loading, preprocessing and dataset construction
-The first task of the project was to be able to treat those huge datasets. In fact, a lot of time has been spent in optimization to be able to go through them in a reasonable computational time also using parallelism. For manageability reasons, the project will focus on one year only (2019). Google Colab is used. Finally, a data frame, linking the datasets Time Series Data and Video Metadata, has been constructed keeping record of important information about the content of the videos.
+The first task of the project was to be able to treat those huge datasets. In fact, a lot of time has been spent in optimization to be able to go through them in a reasonable computational time. For manageability reasons, the project will focus on one year only (2019). We create a smaller dataframe that contains the video metadata but not the heaviest fields ("title", "description" and "tags") plus the sentiment analysis done in step 2.
 
 ### Step 2: Initial plots, sentiment analysis
-Plots about the found results on the title, description and tags are calculated. In fact, different graphics (e.g., histograms) giving information about the content allowing to understand what define successful videos. In addition, a sentiment analysis is performed using Vader. The index returned is used to classify the videos for the next analysis.
+Plots about the found results on the title, description and tags are calculated. Different graphics (e.g., histograms) giving information about the content allowing to understand what define successful videos. In addition, a sentiment analysis is performed using Vader. The values returned are used to classify the videos for the next analysis.
 
 ### Step 3: Determination of the use of emotions in successful videos
 Plots will show how the negativity is linked with the success of the videos. The categories will be analyzed separately to spot a potential difference. 
 
 ### Step 4: Impact of the negativity on the views and likes
-Through the sentiment analysis, the number of views and likes are studied with respect to the sentiment analysis score. Thanks to a linear regression, the goal is to determine if negativity or emotions in general generate more interest. The most sensitive categories to emotions are determined. It will also be determined whether a negative title or a negative description is more connected to the number of likes or views.
+Through the sentiment analysis, the number of views and likes are studied with respect to the sentiment analysis score. Thanks to a linear regression, the goal is to determine if negativity (or emotions in general) generate more interest. The most sensitive categories to emotions are determined. It will also be determined whether a negative title or a negative description (predictor) is more connected to the number of likes or views (outcome).
 
 ### Step 5: Evolution of a channel with respect to the sentiment analysis score
-The study focused till here mostly on the videos. However, the evolution of a channel in term of subscribers, views or likes with respect to its mean sentiment analysis score is determined. The goal is to verify if a link can be found between the latter factors, synonyms of success for a channel, and its use of emotion’s trigger content. Is the impact of negativity so important that it is changing the evolution of a channel? Or is it only a way to maximize its potential?
+The study focused until here mostly on the videos. Now we look at the evolution of a channel in term of number of subscribers, views or likes with respect to its mean sentiment analysis score. The goal is to verify if a link can be found between the latter factors, synonyms of success for a channel, and its use of emotion triggering content. Is the impact of negativity so important that it is changing the evolution of a channel? Or is it only a way to maximize its potential?
 
-### Step 6: Most frequent tags and topics for successful emotional videos 
-First, some pre-processing is done to the most successful negative or positive videos filtered with the sentiment analysis score. In fact, the tags are plot in word clouds to determine the most frequent used ones. The descriptions are also clustered to identify the most used topics in emotional videos. The analysis is performed on different categories considered the most sensitive to emotions by the linear regression. 
+### Step 6: Most frequent words and topics for successful emotional videos 
+First, some pre-processing is done to the most successful negative videos filtered with the sentiment analysis score. Then the words in the titles of the videos are plotted in wordclouds to determine the most frequent ones. The descriptions are also clustered to identify the most used topics in emotional videos. The analysis is performed on different categories considered the most sensitive to emotions by the linear regression. 
 
 ### Step 7: Github site building and Datastory redaction
 The datastory will be write using a selection of the plots realized. The most interesting results will be reported.
-
-
-
-
-
-
 
 
 
