@@ -249,7 +249,7 @@ def text_from_ids(video_ids, data_path):
     
     text_vids = []
     
-    with open(data_path, 'r') as f:
+    with open(data_path, 'r',encoding='utf8') as f:
         reader = csv.DictReader(f, delimiter=',')  
         
         for video in tqdm(reader):
