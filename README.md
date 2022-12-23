@@ -9,7 +9,6 @@ It is often assumed that negative content gathers a lot of attention by stimulat
 
 * How to determine successful videos?
 * Do most successful videos use more emotions in their title and descriptions? 
-    * What kind of emotions?
 * What is the impact of the negativity in the number of views or likes of a video?
     * Does positivity have a bigger impact?
     *	What are the most sensitive categories of videos to negative content?
