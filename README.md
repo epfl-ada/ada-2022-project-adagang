@@ -14,7 +14,7 @@ It is often assumed that negative content gathers a lot of attention by stimulat
     *	What are the most sensitive categories of videos to negative content?
 * Is the use of negativity correlated to the success of a channel through time?
 * What are the best negative topics to use to maximize the success?
-* What are the most successful negative tags?
+* What are the most successful negative titles?
 
 ## Additional Datasets
 
@@ -54,5 +54,18 @@ First, some pre-processing is done to the most successful negative videos filter
 ### Step 7: Github site building and Datastory redaction
 The datastory will be write using a selection of the plots realized. The most interesting results will be reported.
 
+## Authors contributions
+Teammate 1: Djian Post <br>
+Teammate 2: Matteo Peduto <br>
+Teammate 3: Victor Carles <br>
+Teammate 4: Majdouline Ait Yahia <br>
 
+Conception: 1, 2, 3 and 4 <br>
+Data Preproccessing: 1, 2, 3 and 4 <br>
+Sentiment analysis: 1 <br>
+Trending dataset and first analysis: 2 <br>
+Topic research, wordclouds: 4 <br>
+Evolution channels through time: 3 <br>
+Linear regression: 1 <br>
+Data Story construction: 1, 2, 3 and 4 <br>
 
