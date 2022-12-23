@@ -5,6 +5,10 @@ Djian Post, Matteo Peduto, Victor Carles, Majdouline Ait Yahia
 
 It is often assumed that negative content gathers a lot of attention by stimulating people's emotions and catching their attention. But is it an effective way for YouTube channels to have success? The motivation behind this study is to determine, by analyzing the YouNiverse datasets, whether a channel should use negativity content to grow in popularity over time, and to obtain more attention. To conduct this study the video’s title, description and tags has been analyzed. Sentiment analysis, most used words and topic research have been performed in order to determine how emotions are linked to successful videos. The study is conduct on short and long term and investigates whether negative content is a more effective strategy in some fields (e.g. politics, science) than others (e.g. recipes). 
 
+## Datastory
+
+https://djianpost.github.io/youtube-negativity/
+
 ## Research Questions
 
 * How to determine successful videos?
