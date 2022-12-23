@@ -55,17 +55,17 @@ First, some pre-processing is done to the most successful negative videos filter
 The datastory will be write using a selection of the plots realized. The most interesting results will be reported.
 
 ## Authors contributions
-Teammate 1: Djian Post
-Teammate 2: Matteo Peduto
-Teammate 3: Victor Carles
-Teammate 4: Majdouline Ait Yahia
+Teammate 1: Djian Post \\
+Teammate 2: Matteo Peduto\\
+Teammate 3: Victor Carles\\
+Teammate 4: Majdouline Ait Yahia\\
 
-Conception: 1, 2, 3 and 4
-Data Preproccessing: 1, 2, 3 and 4
-Sentiment analysis: 1
-Trending dataset and first analysis: 2
-Topic research, wordclouds: 4
-Evolution channels through time: 3
-Linear regression: 1
-Data Story construction: 1, 2, 3 and 4
+Conception: 1, 2, 3 and 4 \\
+Data Preproccessing: 1, 2, 3 and 4 \\
+Sentiment analysis: 1 \\
+Trending dataset and first analysis: 2 \\
+Topic research, wordclouds: 4 \\
+Evolution channels through time: 3 \\
+Linear regression: 1 \\
+Data Story construction: 1, 2, 3 and 4 \\
 
