@@ -122,7 +122,6 @@ print("finished") #takes 40 min approx'''
 ##=================================NEGATIVE WORDS==================================
 
 # Load the dataset of negative words
-neg_words = set(open('negative-words.txt', mode='r', encoding='iso-8859-1').read().strip().split("\n"))
 
 def count_neg_words(text, fieldname=''):
     ''' Count the number of words and the number of negative words in the text
@@ -133,6 +132,7 @@ def count_neg_words(text, fieldname=''):
         :return: dictionary of features (nb_words, nb_negative_words)
     '''
     words = set(word.lower() for word in text.split(' '))
+    neg_words = set(open('negative-words.txt', mode='r', encoding='iso-8859-1').read().strip().split("\n"))
     nb_negative = len(words.intersection(neg_words))
     nb_words = len(words)
     d =  {
