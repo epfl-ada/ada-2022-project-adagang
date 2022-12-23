@@ -61,7 +61,7 @@ Teammate 3: Victor Carles <br>
 Teammate 4: Majdouline Ait Yahia <br>
 
 Conception: 1, 2, 3 and 4 <br>
-Data Preproccessing: 1, 2, 3 and 4 <br>
+Data Preprocessing: 1, 2, 3 and 4 <br>
 Sentiment analysis: 1 <br>
 Trending dataset and first analysis: 2 <br>
 Topic research, wordclouds: 4 <br>
